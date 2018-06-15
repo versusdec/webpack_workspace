@@ -6,6 +6,6 @@ function getDateAgo(date, days){
     alert(daysAgo.getDate());
 }
 
-let days = 15;
+let days = 14;
 
 getDateAgo(date, days);
