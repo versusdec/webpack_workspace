@@ -60,8 +60,6 @@ function activateGreen() {
     }
 }
 
-
-
 const red = document.querySelector('.red');
 const orange = document.querySelector('.orange');
 const green = document.querySelector('.green');

@@ -1,0 +1,54 @@
+.wrapper {
+    margin: 0 auto;
+    padding: $menu-padding $menu-padding;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1140px;
+}
+
+.accordion-menu {
+    max-width: 500px;
+    width: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: $menu-padding $menu-padding;
+    &__header {
+        position: relative;
+        color: #fff;
+        font-size: 1.2em;
+        background-color: #10a2db;
+        height: 2em;
+        display: flex;
+        align-items: center;
+        padding-left: $menu-padding;
+        box-shadow: inset -5px 5px 5px -5px black;
+        font-weight: 600;
+        transition: all 0.1s;
+        cursor: pointer;
+        &:hover {
+            background-color: #1987b3;
+        }
+        &_triangle {
+            position: absolute;
+            left: 10px;
+            border: 10px solid transparent;
+            border-left: 10px solid #6de687;
+            transition: all 0.2s;
+        }
+    }
+    &__content {
+        padding-left: 4px;
+        border-left: solid $menu-padding #1987b3;
+        max-height: 0;
+        background-color: #c1ecfd;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+    }
+}
+
+.triangle-enabled {
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: 30% 55%;
+}
