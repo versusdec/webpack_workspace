@@ -28,10 +28,12 @@ export function accordeonMenu(menu) {
         const menuContent = item.nextElementSibling;
         if (menuContent.style.maxHeight) {
             menuContent.style.maxHeight = null;
-            item.style.background = '';
-        } else {
+            menuContent.style.paddingTop = '';
+            menuContent.style.paddingBottom = ''
+        } else {;
             menuContent.style.maxHeight = menuContent.scrollHeight + 'px';
-            item.style.background = '#1987b3';
+            menuContent.style.paddingTop = '30px';
+            menuContent.style.paddingBottom = '30px';
         }
     }
 
