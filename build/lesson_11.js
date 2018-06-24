@@ -138,10 +138,13 @@ function accordeonMenu(menu) {
         var menuContent = item.nextElementSibling;
         if (menuContent.style.maxHeight) {
             menuContent.style.maxHeight = null;
-            item.style.background = '';
+            menuContent.style.paddingTop = '';
+            menuContent.style.paddingBottom = '';
         } else {
+            ;
             menuContent.style.maxHeight = menuContent.scrollHeight + 'px';
-            item.style.background = '#1987b3';
+            menuContent.style.paddingTop = '30px';
+            menuContent.style.paddingBottom = '30px';
         }
     }
 
