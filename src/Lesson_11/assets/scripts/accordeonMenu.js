@@ -30,7 +30,7 @@ export function accordeonMenu(menu) {
             menuContent.style.maxHeight = null;
             menuContent.style.paddingTop = '';
             menuContent.style.paddingBottom = ''
-        } else {;
+        } else {
             menuContent.style.maxHeight = menuContent.scrollHeight + 'px';
             menuContent.style.paddingTop = '30px';
             menuContent.style.paddingBottom = '30px';
