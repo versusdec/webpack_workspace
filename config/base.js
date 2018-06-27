@@ -10,6 +10,7 @@ const baseConf = (_path) => {
     const VENDORS_NAME = 'vendors';
     const entry = {
         index: ['./src/index/index.js'],
+        test: ['./src/test/test.js'],
         task1: ['./src/task1/task1.js'],
         task2: ['./src/task2/task2.js'],
         task3: ['./src/task3/task3.js'],
@@ -27,6 +28,7 @@ const baseConf = (_path) => {
         task15: ['./src/task15/task15.js'],
         lesson_10: ['./src/lesson_10/lesson_10.js'],  
         lesson_11: ['./src/lesson_11/lesson_11.js'],  
+        lesson_12: ['./src/lesson_12/lesson_12.js'],  
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
