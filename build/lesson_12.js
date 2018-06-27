@@ -60,45 +60,62 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 39);
+/******/ 	return __webpack_require__(__webpack_require__.s = 43);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 39:
+/***/ 43:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(40);
+module.exports = __webpack_require__(44);
 
 
 /***/ }),
 
-/***/ 40:
+/***/ 44:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(41);
+__webpack_require__(45);
 
-var _accordeonMenu = __webpack_require__(42);
+var _accordionMenuCreator = __webpack_require__(46);
 
-var accMenus = document.querySelectorAll('.accordion-menu');
+var _handler = __webpack_require__(47);
 
-for (var i = 0; i < accMenus.length; i++) {
-    (0, _accordeonMenu.accordeonMenu)(accMenus[i]);
-}
+var accMenu = document.querySelectorAll('.accordion-menu');
+
+var myArr = [{
+    title: "Item 1",
+    content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. "
+}, {
+    title: "Item 2",
+    content: "Aliquam quidem quod odio dolore voluptatibus deleniti minus unde"
+}, {
+    title: "Item 3",
+    content: "facere ab, quasi possimus, ipsa officiis, nostrum illo recusandae ratione. "
+}, {
+    title: "Item 4",
+    content: "Fugiat, praesentium animi?"
+}];
+
+accMenu.forEach(function (item) {
+    (0, _accordionMenuCreator.accordionMenuCreator)(item, myArr);
+    (0, _handler.accordionHandler)(item);
+});
 
 /***/ }),
 
-/***/ 41:
+/***/ 45:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 42:
+/***/ 46:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -107,10 +124,50 @@ for (var i = 0; i < accMenus.length; i++) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.accordeonMenu = accordeonMenu;
-function accordeonMenu(menu) {
+exports.accordionMenuCreator = accordionMenuCreator;
+function accordionMenuCreator(place, arr) {
+    var ACCORDION_MENU_CLASS = 'accordion-menu';
+    var MENU_ITEM_CLASS = ACCORDION_MENU_CLASS + '-item';
+    var MENU_HEADER_CLASS = ACCORDION_MENU_CLASS + '__header';
+    var MENU_CONTENT_CLASS = ACCORDION_MENU_CLASS + '__content';
+    var arrowDown = '<i class="arrow material-icons md-48">keyboard_arrow_down</i>';
+
+    function render(arr) {
+        var menuItem = document.createElement('div');
+        var menuHeader = document.createElement('div');
+        var menuContent = document.createElement('div');
+        menuItem.classList.add(MENU_ITEM_CLASS);
+        menuHeader.classList.add(MENU_HEADER_CLASS);
+        menuHeader.textContent = arr.title;
+        menuHeader.innerHTML = arr.title + arrowDown;
+        menuContent.classList.add(MENU_CONTENT_CLASS);
+        menuContent.textContent = arr.content;
+
+        place.appendChild(menuItem);
+        menuItem.appendChild(menuHeader);
+        menuItem.appendChild(menuContent);
+    }
+
+    arr.forEach(function (element) {
+        render(element);
+    });
+}
+
+/***/ }),
+
+/***/ 47:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.accordionHandler = accordionHandler;
+function accordionHandler(menu) {
     var menuItems = Array.from(menu.querySelectorAll('.accordion-menu__header'));
-    var TRIANGLE_ACTIVE = 'triangle-enabled';
+    var TRIANGLE_ACTIVE = 'arrow-enabled';
     var activeMenu = void 0;
 
     eventHandlers();
@@ -148,7 +205,7 @@ function accordeonMenu(menu) {
     }
 
     function activateTriangle(item) {
-        var triangle = item.querySelector('.accordion-menu__header_triangle');
+        var triangle = item.querySelector('.arrow');
         triangle.classList.toggle(TRIANGLE_ACTIVE);
     }
 

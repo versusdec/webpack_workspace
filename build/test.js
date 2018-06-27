@@ -60,58 +60,52 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 30);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 30:
+/******/ ([
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(31);
+module.exports = __webpack_require__(4);
 
 
 /***/ }),
-
-/***/ 31:
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var date = new Date();
+__webpack_require__(5);
 
-function getWeekDay(date) {
-    var day = date.getDay();
+var products = ['sraka', 'zhopa', 'hui'];
 
-    switch (day) {
-        case 0:
-            alert('Нд');
-            break;
-        case 1:
-            alert('Пн');
-            break;
-        case 2:
-            alert('Вт');
-            break;
-        case 3:
-            alert('Ср');
-            break;
-        case 4:
-            alert('Чт');
-            break;
-        case 5:
-            alert('Пт');
-            break;
-        case 6:
-            alert('Сб');
-            break;
+function mazaFaka(target, arr) {
+    var ul = document.createElement('ul');
+    ul.classList.add('list');
 
-    }
+    arr.forEach(function (item) {
+        var li = document.createElement('li');
+        li.textContent = item;
+        ul.appendChild(li);
+        li.addEventListener('click', function () {
+            console.log(li);
+        });
+    });
+    target.appendChild(ul);
 }
 
-getWeekDay(date);
+mazaFaka(document.querySelector('.some-shit'), products);
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
-
-/******/ });
+/******/ ]);

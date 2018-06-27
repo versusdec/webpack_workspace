@@ -60,26 +60,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 33);
+/******/ 	return __webpack_require__(__webpack_require__.s = 36);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 33:
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(34);
+module.exports = __webpack_require__(37);
 
 
 /***/ }),
 
-/***/ 34:
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(35);
+__webpack_require__(38);
 
 var redActive = false;
 var orangeActive = false;
@@ -145,7 +145,7 @@ green.addEventListener('click', activateGreen);
 
 /***/ }),
 
-/***/ 35:
+/***/ 38:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
