@@ -11,24 +11,8 @@ const baseConf = (_path) => {
     const entry = {
         index: ['./src/index/index.js'],
         test: ['./src/test/test.js'],
-        task1: ['./src/task1/task1.js'],
-        task2: ['./src/task2/task2.js'],
-        task3: ['./src/task3/task3.js'],
-        task4: ['./src/task4/task4.js'],
-        task5: ['./src/task5/task5.js'],
-        task6: ['./src/task6/task6.js'],
-        task7: ['./src/task7/task7.js'],
-        task8: ['./src/task8/task8.js'],
-        task9: ['./src/task9/task9.js'],
-        task10: ['./src/task10/task10.js'],
-        task11: ['./src/task11/task11.js'],
-        task12: ['./src/task12/task12.js'],
-        task13: ['./src/task13/task13.js'],
-        task14: ['./src/task14/task14.js'],
-        task15: ['./src/task15/task15.js'],
-        lesson_10: ['./src/lesson_10/lesson_10.js'],  
-        lesson_11: ['./src/lesson_11/lesson_11.js'],  
         lesson_12: ['./src/lesson_12/lesson_12.js'],  
+        lesson_13: ['./src/lesson_13/lesson_13.js'],  
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {

@@ -1,0 +1,77 @@
+.controls {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1060px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #abfaf6;
+}
+
+.light {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;   
+    &__lamp {
+        width: $lamp-size;
+        height: $lamp-size;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: lightgrey;
+    }
+    &__trigger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        width: 120px;
+        height: 50px;
+        border: 1px solid black;
+        background-color: rgba(139, 0, 0, 0.637);
+        align-self: center;
+        margin-top: 15px;
+        cursor: pointer;
+        &:hover {
+            background-color: #8b0000ce;
+        }
+    }
+}
+
+.button {
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: #cde403;
+    align-self: center;
+    margin: 15px;
+    outline: none;
+    &:hover {
+        background-color: #c5db00;
+    }
+}
+
+.btn-active {
+    background-color: #009e00a9;
+    &:hover {
+        background-color: green;
+    }
+}
+
+.light-active {
+    background-color: #c5db00;
+}
