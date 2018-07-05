@@ -1,5 +1,4 @@
 import './lesson_13.scss';
-
 class Light {
     constructor(target) {
         this.target = target;
@@ -14,6 +13,7 @@ class Light {
         this.active = true;
         btn.textContent = 'OFF';
     }
+
     deactivate(btn) {
         btn.classList.remove('btn-active')
         btn.previousSibling.classList.remove('light-active')
@@ -66,13 +66,14 @@ class Controls {
         this.target.onmousedown = this.target.onselectstart = () => {
             return false;
         };
-
     }
+
     addLight() {
         const newLight = new Light(this.target);
         newLight.render(this.target);
         this.lights.push(newLight);
     }
+    
     toggleAdd() {
         this.activeLights = this.lights.filter((light) => {
             if (light.active === true)
