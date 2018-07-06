@@ -6,7 +6,7 @@ import './lesson_14.scss'
 
 function show() {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:4001/list');
+    xhr.open('GET', 'http://localhost:4001/comments');
     xhr.send();
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
