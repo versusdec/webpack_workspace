@@ -38,12 +38,14 @@
             position: relative;
             margin: 0;
             &:nth-child(2) {
+                display: flex;
                 left: -16px;
-                padding-left: 16px;
+                padding-left: 12px;
                 color: #f9fbff;
                 width: 486px;
                 height: 70px;
                 background-color: #c7a17a;
+                align-items: center;
             }
         }
     }
@@ -53,8 +55,7 @@
     width: 690px;
     position: relative;
     background-color: black;
-    background-image: url('../images/30072807-909538065884146-2710474531215143694-o.png');
-    
+    background-image: url('./assets/images/30072807-909538065884146-2710474531215143694-o.png');
 }
 
 .play-button {
@@ -80,4 +81,45 @@
 .sidebar {
     width: 274px;
     background: #415167;
+    font-family: Nunito;
+    ul {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        padding-left: 57px;
+        bottom: -255px;
+        width: 140px;
+        height: 287px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.5;
+        li {
+            cursor: pointer;
+            color: #edf0f5;
+            &:nth-child(1) {
+                margin-bottom: 6px;
+            }
+            &:hover {
+                text-shadow: 1px 1px #c7a07a;
+            }
+        }
+    }
+    .cart {
+        position: relative;
+        width: 36px;
+        height: 34px;
+        top: 75.6px;
+        left: 54px;
+        background-image: url('./assets/images/cart.png');
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.menu {
+    height: 598px;
 }
