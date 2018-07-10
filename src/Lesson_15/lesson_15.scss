@@ -1,0 +1,23 @@
+@import './styles/commentForm.scss';
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input{
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+}
+
+ul, li {
+    list-style-type: none;
+    padding-left: 0;
+}

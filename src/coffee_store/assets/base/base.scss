@@ -15,11 +15,12 @@
     width: 386px;
     position: relative;
     &__icon {
+        //background-image: url('./assets/images/LOGO-1.png');
         position: absolute;
         top: 75.6px;
         left: 137.3px;
-        width: 109.4px;
-        height: 36.4px;
+        width: 124px;
+        height: 40px;
     }
     &__title {
         position: absolute;
@@ -112,7 +113,7 @@
         height: 34px;
         top: 75.6px;
         left: 54px;
-        background-image: url('./assets/images/cart.png');
+        //background-image: url('./assets/images/cart.png');
         cursor: pointer;
         &:hover {
             transform: scale(1.05);
