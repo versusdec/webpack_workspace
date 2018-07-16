@@ -28,10 +28,46 @@ export class Ajax {
             }
         }
     }
-    static put() {
+    static put(url, data, successCallback, errorCallback) {
+        const xhr = new XMLHttpRequest();
 
-    }
-    static delete() {
+        xhr.open('PUT', url);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(data));
 
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    successCallback(JSON.parse(xhr.response));
+                } else {
+                    if (errorCallback) {
+                        errorCallback(xhr)
+                    } else {
+                        throw Error(xhr.responseText);
+                    }
+                }
+            }
+        }
     }
+    static delete(url, successCallback, errorCallback) {
+        const xhr = new XMLHttpRequest();
+
+        xhr.open('DELETE', url);
+        xhr.send();
+
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    successCallback(JSON.parse(xhr.response));
+                } else {
+                    if (errorCallback) {
+                        errorCallback(xhr)
+                    } else {
+                        throw Error(xhr.responseText);
+                    }
+                }
+            }
+        }
+    }
+
 }
