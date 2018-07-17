@@ -40,7 +40,8 @@
         position: absolute;
         right: 0;
     }
-    &__delete, &__edit {
+    &__delete,
+    &__edit {
         position: absolute;
         width: 12px;
         height: 15px;
@@ -49,6 +50,17 @@
     }
     &__edit {
         top: -10px;
+    }
+}
+
+.editor {
+    position: relative;
+    width: 90%;
+    height: 80px;
+    &__button {
+        position: absolute;
+        height: 80px;
+        width: 7%;
     }
 }
 
