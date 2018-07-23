@@ -4,9 +4,16 @@ export class Editor extends React.Component {
     constructor() {
         super();
         this.state = {
-            value: ''
+            value: '' /* this.test() */
         };
     }
+
+/*     test(){
+        const item = this.props.value;
+        this.setState({
+            value: item
+        })
+    } */
 
     changedText(e) {
         const target = e.target;
@@ -23,6 +30,7 @@ export class Editor extends React.Component {
     }
 
     render() {
+        //console.log(this.props.value)
         if(this.state.value === ''){
             this.setState({
                 value: this.props.item.text

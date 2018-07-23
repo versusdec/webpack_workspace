@@ -1,0 +1,110 @@
+.comment-list {
+  max-width: 960px;
+  min-width: 320px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.logo {
+  margin: 0 auto;
+  max-width: 990px;
+  width: 100%;
+  height: 20vw;
+  background-image: url(./assets/images/MMMC.png);
+  background-repeat: no-repeat;
+  background-size: contain; }
+  @media screen and (min-width: 940px) {
+    .logo {
+      height: 188px; } }
+
+.comments-form {
+  max-width: 800px;
+  width: 90%; }
+
+.comments {
+  overflow-x: hidden; }
+  .comments ul {
+    color: #29A1FF;
+    font-size: 1.1rem;
+    font-weight: 600; }
+  .comments li {
+    position: relative;
+    border-bottom: 1px solid #c0c0c0;
+    padding-bottom: 18px; }
+  .comments__date {
+    position: absolute;
+    right: 0; }
+  .comments__delete, .comments__edit {
+    position: absolute;
+    width: 12px;
+    height: 15px;
+    right: 0;
+    top: -37px; }
+  .comments__edit {
+    right: 35px; }
+
+.editor {
+  position: relative;
+  width: 90%;
+  height: 80px;
+  border-right: none; }
+  .editor__button {
+    position: absolute;
+    height: 80px;
+    width: 7%;
+    min-width: 38px; }
+    @media screen and (max-width: 815px) {
+      .editor__button {
+        right: 0; } }
+
+.comment-input {
+  max-width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .comment-input__author, .comment-input__text {
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #C0C0C0;
+    margin: 5px 0;
+    font-size: 18px;
+    padding-left: 5px; }
+    .comment-input__author:focus, .comment-input__text:focus {
+      border-color: #29A1FF; }
+  .comment-input__text {
+    height: 200px; }
+  .comment-input__submit {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #29A1FF;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer; }
+    .comment-input__submit:active {
+      background-color: #277bbb; }
+    .comment-input__submit:hover {
+      box-shadow: 0 0 5px 1px #000000bf; }
+
+html {
+  font-family: Arial, Helvetica, sans-serif; }
+
+* {
+  box-sizing: content-box; }
+
+input {
+  outline: none; }
+
+textarea {
+  resize: none;
+  outline: none; }
+
+ul, li {
+  list-style-type: none;
+  padding-left: 0; }

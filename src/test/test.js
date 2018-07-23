@@ -1,22 +1,9 @@
 import './test.scss'
+import './app.jsx'
 
 
-const products = ['sraka', 'zhopa', 'hui'];
+const ad1 = document.querySelector('.ad1');
+const ad2 = document.querySelector('.ad2');
 
-function mazaFaka(target, arr) {
-    const ul = document.createElement('ul');
-    ul.classList.add('list');
-
-    arr.forEach((item) => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        ul.appendChild(li);
-        li.addEventListener('click', () => {
-            console.log(li)
-        })
-    })
-    target.appendChild(ul);
-}
-
-
-mazaFaka(document.querySelector('.some-shit'), products)
+ad1.textContent = 'Студия «Аист в экстазе» разработает полнофункциональный продукт ориентированный на целевую аудиторию и еффективно решаущий поставленные перед ним маркетинговые задачию Опыт работ и использование собственных технологий,позволяет предлагать услугу изготовления сайта в Москве в разумные сроки.'
+ad2.textContent = 'Поисковое продвижение (раскрутка) ведется по коммерческим запросам, что позволяет многократно увеличить количество продаж с сайта при разумном рекламном бюджете.'

@@ -23,7 +23,7 @@ export class ItemList extends React.Component {
     edit(element) {
         const item = Object.assign({}, this.props.items)
         const target = element.target.parentElement;
-        render(<Editor item={item} onSubmit={this.onChange.bind(this)}/>, target)
+        render(<Editor item={item} /* value={item.text} */ onSubmit={this.onChange.bind(this)}/>, target)
     }
 
     render() {

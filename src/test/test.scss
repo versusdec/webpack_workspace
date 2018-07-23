@@ -1,4 +1,13 @@
-.some-shit {
-    color: purple;
-    font-size: 25px;
+@import './common/variables/variables.scss';
+@import './common/styles/base.scss';
+body {
+    margin: 0;
+    list-style-type: none;
+    a {
+        text-decoration: none;
+    }
+}
+
+* {
+    box-sizing: border-box;
 }
