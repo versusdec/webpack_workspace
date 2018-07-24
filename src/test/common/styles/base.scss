@@ -12,7 +12,7 @@
 }
 
 .empty-block {
-    background: #777777;
+    background: $bg-dark-grey;
 }
 
 .header {
@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    border-bottom: solid 2px #777777;
+    border-bottom: solid 2px $bg-dark-grey;
     &__logo {
         height: $header-block-height;
         width: 122px;
@@ -38,7 +38,7 @@
         width: 512px;
         text-align: end;
         &_text {
-            padding: 23px;
+            padding: 22px;
             color: #fff;
         }
     }
@@ -48,7 +48,7 @@
     display: flex;
     margin-top: 20px;
     padding-bottom: 20px;
-    border-bottom: solid 1px #777777;
+    border-bottom: solid 1px $bg-dark-grey;
     &__left {
         width: 185px;
         display: inherit;
@@ -62,7 +62,7 @@
         }
     }
     &__left_menu {
-        background: #777777;
+        background: $bg-dark-grey;
         width: 100%;
         padding: 12px 0;
         li {
@@ -72,7 +72,7 @@
     }
     &__center {
         margin-left: 22px;
-        color: #777777;
+        color: $bg-dark-grey;
         max-width: 755px;
         width: 100%;
         &_text-content {
@@ -117,9 +117,16 @@
             padding: 23px;
             word-break: break-all;
             hyphens: auto;
+            @media screen and (max-width: 1024px) {
+                &:nth-child(1) {
+                    margin-right: 20px;
+                }
+            }
         }
     }
 }
+
+
 
 .footer {
     width: 100%;
@@ -130,7 +137,7 @@
     &__block {
         width: 300px;
         height: 180px;
-        background: #777777;
+        background: $bg-dark-grey;
     }
     .footer-menu1 {
         li {
@@ -158,16 +165,20 @@
                 margin-left: -14px;
             }
         }
+        @media screen and (max-width: 1024px) {
+                margin: 0 20px;
+        }
     }
-    .last-block{
+    .last-block {
         background: #fff;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .block-item, .block-img{
-        width: 300px;
+    .block-item,
+    .block-img {
+        max-width: 300px;
         height: 75px;
-        background: #777777;
+        background: $bg-dark-grey;
     }
 }
