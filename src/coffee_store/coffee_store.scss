@@ -1,6 +1,7 @@
+@import './variables/variables.scss';
 @import './mixins/mixins.scss';
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito');
-@import './assets/base/base.scss';
+@import './assets/styles/base/base.scss';
 
 body {
     background-color: #f9fbff;
@@ -8,4 +9,8 @@ body {
 
 a {
     text-decoration: none;
+}
+
+* {
+    box-sizing: content-box;
 }
