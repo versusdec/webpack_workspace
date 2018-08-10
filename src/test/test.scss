@@ -1,13 +1,358 @@
-@import './common/variables/variables.scss';
-@import './common/styles/base.scss';
-body {
-    margin: 0;
-    list-style-type: none;
-    a {
-        text-decoration: none;
-    }
+/* @import './jquery.mCustomScrollbar.css'; */
+/* @import './datepicker.css'; */
+@import './css/sumoselect.css';
+
+.body{
+  background: #fff;
 }
 
-* {
-    box-sizing: border-box;
+.date{
+  width: 270px;
+  height: 235px;
+  background: pink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.test{
+  width: 200px;
+  height: 200px;
+  overflow-y: auto;
+}
+.wrap{
+  margin: 0 auto;
+  .call{
+  width: 500px;
+  height: 200px;
+  }
+}
+
+.modal_brief{
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 28, 28, 0.8);
+  overflow: auto;
+  transition: all 0.3s;
+}
+
+.active{
+  z-index: 15;
+  opacity: 1;
+}
+
+.brief_modal_wrapp_inside {
+  display: flex;
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translate(-50%);
+  flex-direction: column;
+  align-items: center;
+  background: #f2f2f2;
+  max-width: 750px;
+  width: 100%;
+  padding-bottom: 27px;
+}
+
+.custom_checkmark:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #535353;
+  transition: all 0.3s;
+}
+
+.custom_checkmark:after {
+  content: 'x';//url('../img/rewies/checkbox_brief.png');
+  position: absolute;
+  margin-left: 2px;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.brief-modal-box__title {
+  margin: 21px auto;
+  margin-bottom: 17px;
+  padding-left: 3px;
+  font-family: 'CSCMedium', sans-serif;
+  font-size: 21px;
+  color: #282727;
+  letter-spacing: 2.1px;
+}
+
+.brief-modal-box__close {
+  width: 32px;
+  height: 32px;
+  //background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='32' width='32' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath fill='none' stroke='%23A8875A' stroke-width='2' stroke-miterlimit='4' id='path2985' d='m2,14.000017l12,-12'/%3E%3Cpath fill='none' stroke='%23A8875A' stroke-width='2' stroke-miterlimit='4' id='path2985-1' d='m2,1.97026l12,12'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+  position: absolute;
+  right: 0;
+  transition: all 0.3s;
+}
+
+.brief-modal-box__close:hover {
+  //background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='32' width='32' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath fill='none' stroke='%23A8875A' stroke-width='2' stroke-miterlimit='4' id='path2985' d='m2,14.000017l12,-12'/%3E%3Cpath fill='none' stroke='%23A8875A' stroke-width='2' stroke-miterlimit='4' id='path2985-1' d='m2,1.97026l12,12'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: #2a2829;
+  cursor: pointer;
+}
+
+.add-info {
+  height: 81px;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0);
+  resize: none;
+  border: none;
+  font-family: 'CMedium';
+  font-style: italic;
+  font-size: 17px;
+  letter-spacing: 1.8px;
+  padding: 14px 0 0 22px;
+}
+
+.add-info ~ label {
+  position: absolute;
+  left: 26px;
+  top: 13px;
+  z-index: -1;
+}
+
+.add-info:focus {
+  border: none;
+  outline: none;
+}
+
+.input_wrapper {
+  position: relative;
+  width: 85.4%;
+  min-height: 52px;
+  border-bottom: 1px solid #535353;
+  font-family: 'CItalic', sans-serif;
+  font-style: italic;
+  font-size: 17px;
+  letter-spacing: 1.7px;
+}
+
+.input_wrapper:nth-child(4){
+  margin-bottom: 2px;
+}
+.input_wrapper:nth-child(5){
+  margin-bottom: 3px;
+}
+
+.input_wrapper input {
+  position: absolute;
+  border: none;
+  outline: none;
+  font-family: 'CItalic', sans-serif;
+  font-style: italic;
+  font-size: 17px;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  z-index: 1;
+  top: 22px;
+  left: 24px;
+  letter-spacing: 1.8px;
+}
+
+.input_wrapper input ~ label {
+  position: absolute;
+  top: 23px;
+  left: 25px;
+  transition: all 0.3s;
+}
+
+.input_wrapper input:focus ~ label, .input_wrapper textarea:focus ~ label,
+.input_wrapper input:not([value=""]) ~ label, .input_wrapper textarea:not([value=""]) ~ label {
+  position: absolute;
+  color: #bdbdbd;
+  top: 0;
+  left: -1px;
+  transform: scale(0.9);
+  transition: all 0.3s;
+}
+
+.brief_modal_content_wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 85.9%;
+  padding-bottom: 26px;
+}
+
+.brief_modal_content_wrapper > div {
+  position: relative;
+  width: 272px;
+  height: 290px;
+  margin-top: 45px;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  padding-left: 5px;
+}
+
+.brief_modal_content_wrapper .add_products_box:after, .brief_modal_content_wrapper .calendar:after {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: calc(50% - 7px);
+  display: block;
+  //background-image: url('../img/rewies/zakaryha.png');
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 14px;
+}
+.brief_modal_content_wrapper .calendar:after {
+  top: -8px;
+}
+
+.brief_modal_content_wrapper p {
+  position: relative;
+  width: 250px;
+  text-align: center;
+  left: 10px;
+  margin-top: 15px;
+}
+
+.content_box{
+  width: 270px;
+  height: 233px;
+  background: #ffffff;
+  margin-top: 11px;
+  border: 1px solid #636363;
+}
+
+.calendar_box{
+  margin: 10px -3px;
+}
+
+.calendar p{
+  left: 8px;
+}
+
+
+.add_products{
+  //overflow-y: auto;
+  padding: 11px 0 11px 8px;
+}
+
+.add_products .custom_checkmark:before, .add_products .custom_checkmark:after{
+  left: 0;
+  top:0;
+}
+
+.add_products .custom_checkbox{
+  display: flex;
+  position: relative;
+  margin: 6px 0;
+}
+
+.add_products_text{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  font-family: 'CItalic', sans-serif;
+  font-size: 17px;
+  letter-spacing: 2.1px;
+}
+
+.submit_brief_btn {
+  width: 225px;
+  height: 29px;
+  border: 1px solid #AE8863;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 17px;
+  font-family: 'CSCMedium', sans-serif;
+  color: #fff;
+  background: #a28765;
+  cursor: pointer;
+  transition: all .3s;
+  margin: 33px 0 30px 13px;
+}
+
+.submit_brief_btn:hover {
+  border-color: transparent;
+  background: #282727;
+}
+
+.submit_brief_btn:focus {
+  outline: none;
+}
+
+.checkbox_wrapper {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.brief_default_checkbox {
+  opacity: 0;
+}
+
+.brief_custom_checkbox {
+  font-family: 'CItalic', sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  margin: 18px 0 27px 0;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+}
+
+.brief_checkbox_text:before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #535353;
+  transition: all 0.3s;
+}
+
+.brief_checkbox_text:after {
+  content: 'x'; //url('../img/rewies/checkbox_brief.png');
+  position: absolute;
+  top: 3px;
+  left: -9px;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+
+.custom_checkbox input:checked + .custom_checkmark:after {
+  opacity: 1;
+}
+
+.personal_info_text {
+  padding-left: 10px;
+}
+
+.brief_checkbox_text a {
+  border-bottom: 1px solid;
 }

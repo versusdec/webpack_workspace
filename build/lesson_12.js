@@ -60,30 +60,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 36);
+/******/ 	return __webpack_require__(__webpack_require__.s = 27);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 36:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(37);
+module.exports = __webpack_require__(28);
 
 
 /***/ }),
 
-/***/ 37:
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(38);
+__webpack_require__(29);
 
-var _accordionMenuCreator = __webpack_require__(39);
+var _accordionMenuCreator = __webpack_require__(30);
 
-var _handler = __webpack_require__(40);
+var _handler = __webpack_require__(31);
 
 var accMenu = document.querySelectorAll('.accordion-menu');
 
@@ -108,14 +108,14 @@ accMenu.forEach(function (item) {
 
 /***/ }),
 
-/***/ 38:
+/***/ 29:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 39:
+/***/ 30:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -155,7 +155,7 @@ function accordionMenuCreator(place, arr) {
 
 /***/ }),
 
-/***/ 40:
+/***/ 31:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

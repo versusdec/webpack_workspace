@@ -1,0 +1,95 @@
+
+.brief-modal-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background: rgba(31, 31, 31, 0.4);
+    z-index: 5;
+}
+
+.brief-modal-box__content {
+    position: fixed;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 750px;
+    width: 100%;
+    max-height: 915px;
+    height: 100%;
+    background: #fafafa;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 587px) {
+    .brief-modal-box__content {
+        height: 80%;
+        width: 80%;
+    }
+}
+
+.brief-modal-box__title {
+    margin: 23px auto;
+    font-family: 'CSCMedium';
+    font-size: 24px;
+    color: #282727;
+    letter-spacing: 3px;
+}
+
+.brief-modal-box__close {
+    width: 32px;
+    height: 32px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='32' width='32' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='2' stroke-miterlimit='4' id='path2985' d='m2,14.000017l12,-12'/%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='2' stroke-miterlimit='4' id='path2985-1' d='m2,1.97026l12,12'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #2e2e2e;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+}
+
+.brief-modal-box__close:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='32' width='32' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath fill='none' stroke='%23a68c60' stroke-width='2' stroke-miterlimit='4' id='path2985' d='m2,14.000017l12,-12'/%3E%3Cpath fill='none' stroke='%23a68c60' stroke-width='2' stroke-miterlimit='4' id='path2985-1' d='m2,1.97026l12,12'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #2a2829;
+}
+
+.input-form input, .input-form input:focus {
+    border: none;
+    outline: none;
+    font-family: 'CMedium';
+    font-style: italic;
+    font-size: 17px;
+    letter-spacing: 3px;
+    background-color: rgba(255, 0, 0, 0.59);
+    width: 100%;
+}
+
+.input-form input {
+    transition: all 0.2s ease-in-out;
+}
+
+.input-form {
+    position: relative;
+    width: 85.4%;
+    border-bottom: 1px solid #535353;
+    margin-bottom: 18px;
+    padding: 0 0 12px 25px;
+    font-family: 'CMedium';
+    font-style: italic;
+    font-size: 17px;
+    letter-spacing: 3px;
+    label{
+        position: absolute;
+        left: 25px;
+        top: 0;
+        color: #2a2829;
+        transform: translate3d(0, 0, 0);
+        transition: all 0.2s ease-in-out;
+        z-index: -1;
+    }
+}
+

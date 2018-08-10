@@ -215,7 +215,6 @@
         display: grid;
         grid-column-gap: 7.4%;
         grid-template-columns: 19% 19% 19% 19%;
-        grid-row-gap: 40px;
         @media screen and(min-width: 426px) and(max-width: 768px) {
             grid-template-columns: 48% 48%;
         }
@@ -223,7 +222,9 @@
             grid-template-columns: auto;
         }
         .menu-item {
-            background: purple;
+            @media screen and (max-width: 768px) {
+                height: 250px;
+            }
             height: 447px;
             display: flex;
             flex-direction: column;
@@ -249,4 +250,222 @@
             }
         }
     }
+}
+
+.slider-box {
+    position: relative;
+    overflow: hidden;
+    .Mask {
+        position: absolute;
+        z-index: -1;
+        width: 382px;
+        height: 894px;
+        background-color: #415167;
+        top: -80px;
+    }
+}
+
+.slider-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+        margin: 5px 0;
+        width: 235px;
+        height: 20px;
+        font-family: Nunito;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: $def-text-color;
+        text-align: center;
+    }
+    h1 {
+        margin: 0;
+        width: 330.2px;
+        height: 34px;
+        font-family: Montserrat;
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 1.13;
+        color: $def-text-color;
+        text-align: center;
+    }
+}
+
+.slider_container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    .slider_handler {
+        position: relative;
+        z-index: 2;
+        bottom: 312px;
+        left: 97%;
+        width: 48px;
+        height: 48px;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        padding: 0;
+        background: #c7a17a;
+        &:after {
+            content: url('./assets/images/227601-48.png');
+            display: block;
+            transform: scale(0.5);
+        }
+    }
+    .gallery_slider {
+        display: flex;
+        position: relative;
+        .slide {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 540px;
+            padding: 20px;
+        }
+    }
+    .slider_item {
+        position: relative;
+        display: flex;
+        margin-bottom: 32px;
+        width: 49%;
+        height: 47%;
+        background: #fff;
+    }
+}
+
+.slider_item_content {
+    padding: 44px;
+    font-family: Nunito;
+}
+
+.price {
+    color: #c7a17a;
+    font-size: 20px;
+}
+
+.title {
+    font-size: 24px;
+    color: #232c38;
+    font-weight: 700;
+}
+
+.desc {
+    font-size: 16px;
+    font-weight: 300;
+    color: #151d28;
+    margin: 24px 0;
+}
+
+.buttons {
+    display: flex;
+    .button1,
+    .button2 {
+        color: #fff;
+        background: #c7a07a;
+        width: 134px;
+        height: 32px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button2 {
+        color: #415167;
+        background: transparent;
+    }
+}
+
+.tab_wrapp {
+    margin: 0 auto;
+    width: 880px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        position: relative;
+    }
+}
+
+.tab_menu {
+    padding-top: 86px;
+}
+
+.tab_btn {
+    width: 80px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #415167;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 900;
+    background: #edf0f5;
+    cursor: pointer;
+}
+
+.tab_content {
+    display: none;
+}
+
+.active_tab {
+    display: block;
+}
+
+.active_tab_btn {
+    background: #fff;
+}
+
+.item2 {
+    display: block;
+}
+
+.gallery_slider2 {
+    position: relative;
+}
+
+.slide2 {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    .slider_item {
+        display: block;
+    }
+}
+
+.gallery_slider2 {
+    display: flex;
+}
+
+.slider2 {
+    position: relative;
+    z-index: 2;
+    bottom: 312px;
+    left: 97%;
+    width: 48px;
+    height: 48px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: 0;
+    background: #c7a17a;
+    &:after {
+        content: url('./assets/images/227601-48.png');
+        display: block;
+        transform: scale(0.5);
+    }
+}
+
+footer {
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.38;
+    color: #415167;
+    text-align: center;
 }

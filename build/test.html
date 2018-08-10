@@ -1,86 +1,160 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TEST</title>
+    <title>Document</title>
 <link href="test.css" rel="stylesheet"></head>
 
 <body>
-    <div class="main">
-        <div class="header">
-            <img class="header__logo" src="./assets/images/logo.png" alt="LOGO" title="Logo">
-            <div class="header__contact empty-block"></div>
-            <div class="header__more empty-block">
-                <div class="header__more_text">
-                    <li>+7 (495) 345-67-89</li>
-                    <li>manager@site.ru</li>
-                    <li>www.site.ru</li>
-                </div>
-            </div>
+    <div class="wrap">
+        <button class="call">
+            CALL US
+        </button>
+        <div class="select-wrapp">
+            <select name="" id="" class="custom" placeholder="this is a placeholder">
+                <option value="0">123</option>
+                <option value="1">sf  fsfsdf</option>
+                <option value="2">aaaaaaaaaaaaaaaaaaasda </option>
+                <option value="3">a324 23</option>
+                <option value="4">tesgf gt</option>
+            </select>
+            
         </div>
-        <div class="content">
-            <div class="content__left">
-                <div class="content__left_menu menu">
+        <div class="select-wrapper">
 
-                </div>
-                <img class="content__left_bottom-block" src="./assets/images/green.png" alt="Some Pic" title="My cool block">
-            </div>
-            <div class="content__center">
-                <div class="content__center_text-content">
-                    <div class="text-header">PSD файл с макетом. Макет разбит по слоям и сгруппирован по папкам:</div>
-                    <div class="text-content">
-                        <li>
-                            <span>number</span> - нумерация блоков (номера блоков верстать не нужно)
-                            <li>
-                                <span>text</span> - текстовые блоки (шрифт Arial, размер 14 пикселей, межстрочное расстояние 22
-                                пикселя)</li>
-                            <li>
-                                <span>head</span> - шапка сайта</li>
-                            <li>
-                                <span>content</span> - контентная область, которая в свою очередь делится на
-                                <span>left</span> - левый блок и
-                                <span>center</span>
-                            </li>
-                    </div>
-                    <div class="textfooter">
-                        <li>Текстовое описание задания и требования.</li>
-                    </div>
-                </div>
-                <div class="content__center__image-wrapper">
-                    <img src="./assets/images/image.png" alt="image" title="image">
-                    <img src="./assets/images/image.png" alt="image" title="image">
-                    <img src="./assets/images/image.png" alt="image" title="image">
-                    <img src="./assets/images/image.png" alt="image" title="image">
-                    <img src="./assets/images/image.png" alt="image" title="image">
-                    <img src="./assets/images/image.png" alt="image" title="image">
-                    <img src="./assets/images/image.png" alt="image" title="image">
-                </div>
-                <div class="content__center_footer">
-                    <div class="content__center_text-block ad1">
-
-                    </div>
-                    <div class="content__center_text-block ad2">
-
-                    </div>
-                </div>
-            </div>
+            <select multiple class="custom2" placeholder="this is a placeholder">
+                <option value="0">123</option>
+                <option value="1">sf  fsfsdf</option>
+                <option value="2">aaaaaaaaaaaaaaaaaaasda </option>
+                <option value="3">a324 23</option>
+                <option value="4">tesgf gt</option>
+            </select>
         </div>
-        <div class="footer">
-            <div class="footer__block footer-menu1">
 
-            </div>
-            <div class="footer__block footer-menu2">
 
-            </div>
-            <div class="footer__block last-block">
-                <div class="block-item"></div>
-                <img class="block-img" src="./assets/images/logo.png" alt="image" title="image">
-            </div>
+        <div class="modal modal_brief">
+
+                
+            <form action="">
+                <div class="brief_modal_wrapp_inside">
+                    <div class="brief-modal-box__close"></div>
+                    <div class="brief-modal-box__title">
+                        Бриф для корпоративных заказов
+                    </div>
+                    <div class="input_wrapper">
+                        <input type="text" name="contact-person" value="" required>
+                        <label class="floating_label" for="contact-person">Контактное лицо:</label>
+                    </div>
+                    <div class="input_wrapper">
+                        <input type="text" name="phone" value="" required>
+                        <label class="floating_label" for="phone">Телефон:</label>
+                    </div>
+                    <div class="input_wrapper">
+                        <input type="text" name="company" value="">
+                        <label class="floating_label" for="company">Название компании или сайт:</label>
+                    </div>
+                    <div class="input_wrapper">
+                        <input type="text" name="object" value="">
+                        <label class="floating_label" for="object">Объект(ы) съемки:</label>
+                    </div>
+                    <div class="input_wrapper">
+                        <textarea value="" name="misc" id="" class="add-info" value=""></textarea>
+                        <label class="floating_label" for="misc">Дополнительный комментарий:</label>
+                    </div>
+                    <div class="brief_modal_content_wrapper">
+                        <div class="add_products_box">
+                            <p>Дополнительная продукция</p>
+                            <div class="add_products content_box custom_scrollbar">
+
+                            </div>
+                        </div>
+                        <div class="calendar">
+                            <p>Дата проведения съемки:</p>
+                            <div class="calendar_box content_box"></div>
+                        </div>
+                    </div>
+                    <div class="input_wrapper">
+                        <input value="" name="deadline" value="">
+                        <label class="floating_label" for="deadline">Желаемый срок исполнения заказа:</label>
+                    </div>
+                    <input type="submit" class="submit_brief_btn" value="ОТПРАВИТЬ ЗАЯВКУ">
+
+                    <div class="checkbox_wrapper">
+                        <label class="brief_custom_checkbox custom_checkbox">
+                            <input type="checkbox" class="brief_default_checkbox" checked required>
+                            <span class="brief_checkbox_text custom_checkmark">Я согласен с обработкой моих
+                                <a href="#" target="_blank">персональных</a> данных</span>
+                        </label>
+                    </div>
+
+                </div>
+
+            </form>
         </div>
-    </div>
+        <div class="date datepicker-here">
+
+
+        </div>
+<!--         <div class="test custom_scrollbar">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </div> -->
+
+
+        <div class="test">
+
+        </div>
 
 <script type="text/javascript" src="vendors.js"></script><script type="text/javascript" src="test.js"></script></body>
 
